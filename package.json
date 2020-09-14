@@ -1,14 +1,28 @@
 {
-  "name": "vue-split-panel",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@dengs/vue-split-panel",
+  "version": "0.1.1",
+  "private": false,
+  "main": "lib/vue-split-panel.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --name vue-split-panel --mode prod --target lib --dest lib src/components/split-panel/index.js",
+    "publish": "npm publish --access public",
     "lint": "vue-cli-service lint"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dengs/vue-split-panel.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "split.js": "^1.6.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
