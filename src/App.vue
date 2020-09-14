@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- vue-split-panel 组件示例 -->
+    <vue-split-panel :sizes="[30, 40, 30]" :min-size="[50, 100]" direction="vertical">
+      <template slot="__TOP__">
+        <vue-split-panel :sizes="[30, 40, 30]" :min-size="[50, 100]" direction="horizontal">
+          <template slot="__TOP_LEFT__">
+            <h1>LEFT</h1>
+          </template>
+          <template slot="__TOP_CENTER__">
+            <h1>CENTER</h1>
+          </template>
+          <template slot="__TOP_RIGHT__">
+            <h1>RIGHT</h1>
+          </template>
+        </vue-split-panel>
+      </template>
+      <template slot="__MIDDLE__">
+        <vue-split-panel :sizes="[50, 50]" :min-size="[0, 0]" direction="horizontal">
+          <template slot="__MIDDLE_LEFT__">
+            <h1>LEFT</h1>
+          </template>
+          <template slot="__MIDDLE_RIGHT__">
+            <h1>RIGHT</h1>
+          </template>
+        </vue-split-panel>
+      </template>
+      <template slot="__BOTTOM__">
+        <vue-split-panel :sizes="[50, 50]" :min-size="[0, 0]" direction="vertical">
+          <template slot="__BOTTOM_TOP__">
+            <h1>LEFT</h1>
+          </template>
+          <template slot="__BOTTOM_BOTTOM__">
+            <h1>RIGHT</h1>
+          </template>
+        </vue-split-panel>
+      </template>
+    </vue-split-panel>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import VueSplitPanel from "./components/split-panel";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    VueSplitPanel,
+  },
+};
 </script>
 
 <style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  width: 100%;
 }
 </style>
