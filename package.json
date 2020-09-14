@@ -2,6 +2,12 @@
   "name": "@dengs/vue-split-panel",
   "version": "0.1.1",
   "private": false,
+  "description": "vue-split-panel 分割面板组件.",
+  "author": {
+    "name": "dengs",
+    "email": "imdengs@hotmail.com",
+    "url": "https://www.cbtak.cn"
+  },
   "main": "lib/vue-split-panel.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
