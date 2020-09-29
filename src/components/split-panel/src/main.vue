@@ -30,10 +30,10 @@ export default {
   mounted() {
     // 添加 panel 样式
     this.panes.forEach((item) => {
-      let panel = document ? document.querySelector(`#${item}`) : null;
-      if (panel) {
-        panel.classList.add("panel");
-        panel.classList.add(`${this.direction}-panel`);
+      let elm = this.$slots[item][0].elm;
+      if (elm && elm.parentElement && elm.parentElement.id === item) {
+        elm.parentElement.classList.add("panel");
+        elm.parentElement.classList.add(`${this.direction}-panel`);
       }
     });
     // 实例化分隔面板组件

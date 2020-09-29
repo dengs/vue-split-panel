@@ -1,6 +1,6 @@
 {
   "name": "@dengs/vue-split-panel",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "vue-split-panel 分割面板组件.",
   "author": {
@@ -13,7 +13,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:lib": "vue-cli-service build --name vue-split-panel --mode prod --target lib --dest lib src/components/split-panel/index.js",
-    "push": "npm publish --access public",
+    "pub": "npm publish --access public",
     "lint": "vue-cli-service lint"
   },
   "license": "MIT",
