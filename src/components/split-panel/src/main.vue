@@ -30,7 +30,7 @@ export default {
   mounted() {
     // 添加 panel 样式
     this.panes.forEach((item) => {
-      let panel = document.querySelector(`#${item}`);
+      let panel = document ? document.querySelector(`#${item}`) : null;
       if (panel) {
         panel.classList.add("panel");
         panel.classList.add(`${this.direction}-panel`);
