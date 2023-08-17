@@ -1,6 +1,6 @@
 {
   "name": "@dengs/vue-split-panel",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": false,
   "description": "vue-split-panel 分割面板组件.",
   "author": {
